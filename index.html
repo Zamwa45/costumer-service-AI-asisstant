@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zamo's AI Assistant</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="chat-container">
+    <div class="chat-header">
+      <div class="header-content">
+        <div class="logo">
+          <div class="logo-icon">
+            <i class="fas fa-robot"></i>
+          </div>
+          <span>Zamo's AI Assistant</span>
+        </div>
+        <div class="header-actions">
+          <button class="action-button" id="clear-chat" data-tooltip="Clear chat">
+            <i class="fas fa-broom"></i>
+          </button>
+          <button class="action-button" id="theme-toggle">
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="messages" id="messages">
+      <!-- Initial greeting message -->
+      <div class="message-container ai">
+        <div class="message-header">
+          <div class="avatar ai">
+            <i class="fas fa-robot"></i>
+          </div>
+          <div class="sender-name">AI Assistant</div>
+        </div>
+        <div class="message ai">
+          <p>👋 سڵاو! من یاریدەدەری زەکی زامۆیم. چۆن دەتوانم یارمەتیت بدەم ئەمڕۆ؟</p>
+          <p>دەتوانم وەڵامی پرسیارەکانت بدەمەوە دەربارەی Hulk Gym، یان زانیاری پێویستت پێبدەم!</p>
+        </div>
+        <div class="message-info">
+          <i class="far fa-clock"></i>
+          <span>Today, 12:00 PM</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="typing-indicator" id="typing-indicator">
+      <div class="typing-avatar">
+        <i class="fas fa-robot"></i>
+      </div>
+      <div class="typing-dots">
+        <div class="typing-dot"></div>
+        <div class="typing-dot"></div>
+        <div class="typing-dot"></div>
+      </div>
+    </div>
+    
+    <div class="features-indicator">
+      <button class="feature-button tooltip" data-tooltip="Voice input">
+        <i class="fas fa-microphone"></i>
+      </button>
+      <button class="feature-button tooltip" data-tooltip="Upload file">
+        <i class="fas fa-paperclip"></i>
+      </button>
+      <button class="feature-button tooltip pulse" data-tooltip="AI suggestions">
+        <i class="fas fa-lightbulb"></i>
+      </button>
+    </div>
+    
+    <div class="input-area">
+      <div class="input-container">
+        <input type="text" id="user-input" placeholder="پەیامەکەت لێرە بنووسە..." />
+        <div class="input-actions">
+          <button class="input-action tooltip" data-tooltip="Emoji">
+            <i class="far fa-smile"></i>
+          </button>
+          <button class="input-action tooltip" data-tooltip="Attach">
+            <i class="fas fa-paperclip"></i>
+          </button>
+        </div>
+        <button id="send-button">
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
